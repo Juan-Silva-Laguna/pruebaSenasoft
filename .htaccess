@@ -1,0 +1,10 @@
+Options All -Indexes
+RewriteEngine On
+#RewriteRule 
+ErrorDocument 404 /ErrorHtaccess/404notFound.html
+ErrorDocument 403 /ErrorHtaccess/403notFound.html
+
+RewriteBase /cigarreria_proyecto/
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteRule ^(.*)$ $1.php
